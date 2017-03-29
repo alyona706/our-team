@@ -74,6 +74,8 @@ $text-color: #333333;
 	color: $primary-color;
 	font-size: 40px;
 	position: absolute;
+	cursor: pointer;
+	transition: font-size .2s ease-in;
 	&--left {
 		top: 50%;
 		left: 0;
@@ -81,6 +83,9 @@ $text-color: #333333;
 	&--right {
 		right: 0;
 		top: 50%;
+	}
+	&:hover {
+		font-size: 50px;
 	}
 }
 
@@ -213,4 +218,36 @@ $text-color: #333333;
 	color: #666;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+.ba-slider {
+	margin: 40px 0 95px;
+	&__list {
+		list-style-type: none;
+		font-size: 0;
+		padding: 0;
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__button {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $primary-color;
+		border-style: none;
+		cursor: pointer;
+		transition: box-shadow .2s ease-in;
+		&:hover {
+			box-shadow: 0 0 8px rgba(0,0,0,.8);
+		}
+		&--activ {
+			width: 12px;
+			height: 12px;
+			background-color: #FFF;
+			border: 1px solid $primary-color;
+		}
+	}
+}
+.ba-slider__item + .ba-slider__item {
+	margin-left: 9px;
 }
